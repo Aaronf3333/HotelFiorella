@@ -1,20 +1,17 @@
 <?php
-// Inicia el buffer de salida para evitar errores de "headers already sent"
-ob_start();
-
+ob_start(); // Buffer de salida
 session_start();
 
-// Incluimos cabecera y conexión a la base de datos
-include('includes/header_public.php');
+// Incluimos solo la conexión a la BD
 include('includes/db.php');
 
-// Verificamos si no hay una sesión de usuario activa
+// Verificamos sesión
 if (!isset($_SESSION['usuario_id'])) {
     header('Location: login.php?notice=login_required&redirect_to=reservar.php');
     exit();
 }
 
-// Obtenemos el nombre de la persona desde la BD
+// Obtenemos el nombre de la persona
 try {
     $sql_nombre = "SELECT p.Nombres 
                    FROM Persona p 
@@ -29,7 +26,7 @@ try {
     $nombre_persona = 'Cliente';
 }
 
-// Cargamos datos para los menús desplegables
+// Datos para los menús
 try {
     $habitaciones_sql = "SELECT h.HabitacionID, h.NumeroHabitacion, th.N_TipoHabitacion, h.PrecioPorNoche
                          FROM Habitaciones h 
@@ -45,17 +42,10 @@ try {
     $habitaciones_disponibles = [];
     $metodos_pago = [];
 }
-?>
 
-<style>
-    .form-container { display: flex; justify-content: center; padding: 40px 0; }
-    .form-box { padding: 30px; background: #fff; box-shadow: 0 0 15px rgba(0,0,0,0.1); border-radius: 8px; width: 600px; }
-    .form-box h2 { text-align: center; color: var(--primary-color); margin-bottom: 25px; }
-    .form-group { margin-bottom: 20px; }
-    .form-group label { display: block; margin-bottom: 8px; font-weight: bold; }
-    .form-group input, .form-group select { width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ccc; }
-    .btn { cursor: pointer; background-color: var(--primary-color); color: #fff; border: none; border-radius: 5px; padding: 12px; font-size: 1em; }
-</style>
+// FIN DE LÓGICA, AHORA INCLUIMOS HTML
+include('includes/header_public.php'); 
+?>
 
 <div class="form-container">
     <div class="form-box">
@@ -104,5 +94,5 @@ try {
 
 <?php 
 include('includes/footer.php'); 
-ob_end_flush(); // Envía todo el buffer al navegador
+ob_end_flush(); // Envía el buffer
 ?>
