@@ -1,0 +1,1087 @@
+/* Estilos Generales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: #E9ECEF;
+    color: #333;
+}
+
+main {
+    padding: 20px;
+}
+
+/* --- Layout de Paneles (Admin y Cliente) --- */
+.panel-layout {
+    display: flex;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #343A40;
+    color: white;
+    min-height: 100vh;
+    padding: 15px;
+}
+
+.sidebar h3 {
+    text-align: center;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #495057;
+    margin-top: 0;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li a {
+    display: block;
+    color: #CED4DA;
+    padding: 12px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.sidebar ul li a:hover, .sidebar ul li a.active {
+    background-color: #007BFF;
+    color: white;
+}
+
+.content {
+    flex-grow: 1;
+    padding: 30px;
+}
+
+.content h2 {
+    border-bottom: 2px solid #007BFF;
+    padding-bottom: 10px;
+    margin-top: 0;
+    color: #343A40;
+}
+
+/* Header de los Paneles */
+.panel-header {
+    background-color: #FFFFFF;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.panel-header .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #007BFF;
+}
+.panel-header .user-info a {
+    background-color: #DC3545;
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* --- Estilos del Dashboard (Admin) --- */
+.dashboard-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.card {
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    flex: 1;
+    min-width: 200px;
+    text-align: center;
+}
+.card h4 {
+    margin: 0 0 10px 0;
+    color: #007BFF;
+}
+.card p {
+    font-size: 2em;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* --- Estilos para Gestión de Habitaciones (Cards) --- */
+.habitaciones-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+.habitacion-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+.habitacion-card h4 {
+    margin-top: 0;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+.habitacion-card p {
+    margin: 10px 0;
+}
+
+/* --- Estilos para Tablas --- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.1);
+}
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+    vertical-align: middle;
+}
+th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+}
+
+/* --- Estilos de Formulario y Botones --- */
+.btn {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    color: white !important;
+    text-align: center;
+}
+.btn-primary { background-color: #007BFF; }
+.btn-success { background-color: #28A745; }
+.btn-danger { background-color: #DC3545; }
+.btn-secondary { background-color: #6C757D; }
+
+/* --- Página de Login --- */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+.login-box {
+    padding: 40px;
+    background: #fff;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    width: 350px;
+    text-align: center;
+}
+.login-box h2 {
+    margin-bottom: 20px;
+    color: #007BFF;
+}
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.login-box .btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+}
+.login-box .links {
+    margin-top: 20px;
+}
+.login-box .links a {
+    color: #007BFF;
+    text-decoration: none;
+    display: block;
+    margin-top: 10px;
+}
+
+
+
+/* Estilos Globales */
+:root {
+    --primary-color: #0056b3;
+    --secondary-color: #6c757d;
+    --accent-color: #28a745;
+    --text-color: #333;
+    --bg-light: #f8f9fa;
+    --bg-dark: #343a40;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-light);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: none;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #004085;
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+.btn-accent {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.btn-accent:hover {
+    background-color: #218838;
+}
+
+.hidden {
+    display: none;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Header */
+.main-header {
+    background-color: white;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo a {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.main-nav ul li {
+    margin-left: 25px;
+}
+
+.main-nav ul li a {
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+.auth-buttons .btn {
+    margin-left: 10px;
+}
+
+/* Hero Section */
+/* Hero Section */
+.hero-section {
+    /* ----- AQUÍ ESTÁ EL CAMBIO ----- */
+    background: url('../../img/hotelfiorellafondo.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 500px;
+}
+
+.hero-content h1 {
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+/* ... (el resto de tu CSS no cambia) ... */
+
+.booking-search-form {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.booking-search-form input,
+.booking-search-form select,
+.booking-search-form button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.booking-search-form button {
+    cursor: pointer;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+}
+
+/* Featured Rooms Section */
+.featured-rooms-section,
+.google-maps-section,
+.about-us-section,
+.creators-info-section {
+    padding: 60px 20px;
+    background-color: white;
+    margin-top: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.featured-rooms-section h2,
+.google-maps-section h2,
+.about-us-section h2,
+.creators-info-section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    color: var(--primary-color);
+}
+
+.room-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.room-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    background-color: white;
+    padding-bottom: 20px;
+}
+
+.room-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.room-card h3 {
+    margin: 10px 0;
+    color: var(--primary-color);
+}
+
+.room-card p {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.room-card .btn {
+    margin-top: 15px;
+}
+
+.room-status {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.room-status.available {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.room-status.occupied {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.room-status.cleaning {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.room-status.maintenance {
+    background-color: #cfe2ff;
+    color: #052c65;
+}
+
+/* Footer */
+.main-footer {
+    background-color: var(--bg-dark);
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.footer-columns {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 250px;
+    margin: 20px;
+}
+
+.footer-col h3 {
+    color: white;
+    margin-bottom: 15px;
+}
+
+.footer-col p,
+.footer-col ul {
+    color: #bbb;
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 8px;
+}
+
+.footer-col ul li a {
+    color: #bbb;
+}
+
+.social-links img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.copyright {
+    border-top: 1px solid #555;
+    padding-top: 20px;
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #bbb;
+}
+
+
+
+
+/* --- Estilos del Footer Principal --- */
+.main-footer {
+    background-color: #222222; /* Fondo oscuro */
+    color: #ffffff;
+    padding: 40px 20px 20px; /* Relleno superior, horizontal, inferior */
+    font-size: 0.9em;
+}
+
+.main-footer .container {
+    max-width: 1200px; /* Asegura que el contenido del footer tenga un ancho máximo */
+    margin: 0 auto; /* Centra el contenido */
+}
+
+/* Layout de columnas del footer */
+.footer-grid-layout {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Permite que las columnas se envuelvan en pantallas pequeñas */
+    padding-bottom: 30px; /* Espacio antes del copyright */
+}
+
+.footer-col {
+    flex: 1; /* Distribuye el espacio equitativamente */
+    min-width: 280px; /* Ancho mínimo antes de envolver */
+    margin: 15px; /* Margen entre columnas */
+}
+
+.footer-col h3 {
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    border-bottom: 1px solid #444; /* Pequeña línea debajo de los títulos */
+    padding-bottom: 10px;
+}
+
+.footer-col ul {
+    list-style: none; /* Quita los puntos de la lista */
+    padding: 0;
+    margin: 0;
+}
+
+.footer-col ul li {
+    display: flex; /* Para alinear el icono, texto y avatar */
+    align-items: center; /* Centra verticalmente los elementos */
+    margin-bottom: 12px; /* Espacio entre elementos de la lista */
+}
+
+.footer-col ul li .icon {
+    margin-right: 10px; /* Espacio a la derecha del icono */
+    font-size: 1.1em;
+    color: #f0c300; /* Color distintivo para los iconos, similar al dorado de la imagen */
+}
+
+.footer-col ul li .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* Hace el avatar redondo */
+    margin-left: 10px; /* Espacio a la izquierda del avatar */
+    object-fit: cover; /* Asegura que la imagen cubra el área */
+    border: 1px solid #555; /* Borde sutil para los avatares */
+}
+
+.footer-col ul li a {
+    color: #ccc; /* Color del texto de los enlaces */
+    text-decoration: none; /* Quita el subrayado del enlace */
+    transition: color 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #f0c300; /* Color al pasar el ratón */
+    text-decoration: underline;
+}
+
+.footer-col .email {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.footer-col .email:hover {
+    text-decoration: underline;
+    color: #f0c300;
+}
+
+/* Estilos específicos para la columna del Hotel Info (Columna central) */
+.hotel-info-col {
+    text-align: center; /* Centra el contenido del hotel */
+}
+
+.hotel-info-col .hotel-logo {
+    max-width: 150px; /* Ajusta el tamaño del logo del hotel */
+    height: auto;
+    margin-bottom: 15px;
+    filter: invert(1); /* Si tu logo es oscuro y el fondo es oscuro, invierte el color */
+    /* Considera subir una versión blanca o clara de tu logo si es necesario */
+}
+
+.hotel-info-col .hotel-slogan {
+    font-style: italic;
+    margin-top: -10px;
+    margin-bottom: 20px;
+    color: #ccc;
+}
+
+/* Estilos para la sección de Redes Sociales */
+.social-links {
+    margin-top: 25px;
+    text-align: center; /* Centra los iconos si la columna es pequeña */
+}
+
+.social-links a {
+    color: #ffffff; /* Color de los iconos */
+    font-size: 1.8em; /* Tamaño de los iconos */
+    margin: 0 10px; /* Margen entre iconos */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #f0c300; /* Color al pasar el ratón (dorado) */
+}
+
+/* Estilos para la sección de Copyright */
+.footer-copyright {
+    text-align: center; /* Centra el texto */
+    padding-top: 15px;
+    border-top: 1px solid #333333; /* Línea separadora */
+    margin-top: 20px;
+    color: #aaaaaa; /* Color de texto más claro */
+    font-size: 0.85em;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 992px) {
+    .footer-grid-layout {
+        flex-direction: column; /* Apila las columnas verticalmente */
+        align-items: center; /* Centra las columnas apiladas */
+    }
+
+    .footer-col {
+        margin-bottom: 30px; /* Más espacio entre columnas apiladas */
+        width: 90%; /* Ocupa más ancho en pantallas pequeñas */
+        min-width: unset; /* Deshabilita el min-width */
+        text-align: left; /* Alinea el texto a la izquierda en columnas apiladas */
+    }
+
+    .hotel-info-col {
+        order: -1; /* Mueve la columna del hotel al principio en móvil */
+        text-align: center; /* Mantiene el logo y eslogan centrados */
+    }
+
+    .hotel-info-col ul li {
+        justify-content: center; /* Centra los elementos de la lista en móvil */
+    }
+
+    .quick-links-col ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; /* Centra los enlaces si hay muchos */
+    }
+
+    .quick-links-col ul li {
+        width: 48%; /* Dos columnas de enlaces */
+        margin-right: 2%;
+    }
+
+    .social-links {
+        text-align: center; /* Asegura que los iconos estén centrados */
+    }
+}
+
+@media (max-width: 576px) {
+    .quick-links-col ul li {
+        width: 100%; /* Una columna de enlaces en pantallas muy pequeñas */
+        margin-right: 0;
+    }
+}
+
+/* Estilos para tu diseño existente que pueden necesitar ajustarse */
+/* Asegúrate de que las propiedades del body, container y otras secciones no interfieran */
+/* Ejemplo de estilos de contenedor general que ya podrías tener: */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px; /* Asegura un padding horizontal */
+}
+
+/* Estilos para el header y hero section que ya tienes */
+/*
+.main-header { ... }
+.hero-section { ... }
+.btn { ... }
+.room-card { ... }
+*/
+
+
+
+/* --- Sección de Información del Hotel --- */
+.hotel-info-section {
+    padding: 40px 0;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.hotel-info-section h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 30px;
+    text-align: left; /* Alineado a la izquierda como en la imagen */
+    padding-left: 20px; /* Alineación con el contenido principal */
+}
+
+.info-content-wrapper {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las columnas se apilen en pantallas pequeñas */
+    gap: 30px; /* Espacio entre columnas */
+    padding: 0 20px; /* Padding para el contenido dentro del contenedor principal */
+}
+
+/* --- Columna Izquierda --- */
+.info-left-column {
+    flex: 2; /* Ocupa más espacio que la derecha */
+    min-width: 300px; /* Ancho mínimo para esta columna antes de apilarse */
+}
+
+.overall-rating {
+    display: flex;
+    align-items: flex-end; /* Alinea los números y el texto */
+    margin-bottom: 20px;
+}
+
+.overall-rating .rating-number {
+    font-size: 4em; /* Tamaño grande para el número */
+    font-weight: bold;
+    color: #333;
+    line-height: 1; /* Elimina espacio extra */
+    margin-right: 15px;
+}
+
+.overall-rating .rating-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.overall-rating .rating-description {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #cc0000; /* Color rojo para "Horrible" */
+    margin: 0;
+}
+
+.overall-rating .star-rating {
+    display: flex;
+    align-items: center;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.overall-rating .star-rating .fas.fa-star {
+    margin-right: 2px;
+    color: #cccccc; /* Estrellas vacías grises */
+}
+
+.overall-rating .star-rating .fas.fa-star.filled {
+    color: #00a651; /* Estrellas llenas verdes */
+}
+
+.overall-rating .star-rating span {
+    margin-left: 5px;
+}
+
+
+.hotel-count {
+    font-size: 0.85em;
+    color: #777;
+    margin-top: -10px; /* Ajusta el margen si es necesario */
+    margin-bottom: 25px;
+}
+
+/* Estilos para las calificaciones detalladas (círculos) */
+.detailed-ratings {
+    margin-bottom: 30px;
+}
+
+.detailed-ratings .rating-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.detailed-ratings .rating-item span:first-child {
+    font-weight: bold;
+    color: #333;
+    width: 30px; /* Ancho fijo para los números */
+    text-align: right;
+    margin-right: 10px;
+}
+
+.detailed-ratings .rating-circles {
+    display: flex;
+    margin-right: 15px;
+}
+
+.detailed-ratings .circle {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #cccccc; /* Círculo vacío */
+    margin-right: 4px;
+    border: 1px solid #cccccc;
+}
+
+.detailed-ratings .circle.filled {
+    background-color: #00a651; /* Círculo lleno verde */
+    border-color: #00a651;
+}
+
+.detailed-ratings .circle.half-filled {
+    /* Esto es más complejo. Para simplificar, podrías usar un degradado o un SVG */
+    background: linear-gradient(to right, #00a651 50%, #cccccc 50%);
+    border-color: #00a651; /* O el color del borde si es híbrido */
+}
+
+.detailed-ratings .rating-label {
+    color: #555;
+    font-size: 0.95em;
+}
+
+.hotel-description {
+    font-size: 0.95em;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.suggest-edit {
+    font-size: 0.85em;
+    color: #777;
+    margin-bottom: 5px;
+}
+
+.edit-profile-link {
+    color: #007bff; /* Color de enlace azul */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+.edit-profile-link:hover {
+    text-decoration: underline;
+}
+
+/* --- Columna Derecha --- */
+.info-right-column {
+    flex: 3; /* Ocupa más espacio para los servicios */
+    min-width: 300px; /* Ancho mínimo para esta columna */
+}
+
+.info-right-column h3 {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #eee; /* Línea separadora */
+}
+
+/* Sección de Servicios */
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* 2 columnas fluidas */
+    gap: 15px 25px; /* Espacio vertical y horizontal */
+    margin-bottom: 20px;
+}
+
+.service-item {
+    display: flex;
+    align-items: center;
+    color: #444;
+    font-size: 0.95em;
+}
+
+.service-item i {
+    margin-right: 10px;
+    color: #00a651; /* Color verde para los iconos de servicio */
+    font-size: 1.1em;
+}
+
+.show-more-button {
+    background: none;
+    border: none;
+    color: #007bff;
+    font-size: 0.9em;
+    cursor: pointer;
+    padding: 0;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.show-more-button:hover {
+    text-decoration: underline;
+}
+
+.show-more-button i {
+    margin-left: 5px;
+    font-size: 0.8em;
+}
+
+/* Tipos de habitación */
+.room-types-section {
+    margin-bottom: 30px;
+}
+
+.room-type-item {
+    display: flex;
+    align-items: center;
+    color: #444;
+    font-size: 0.95em;
+    margin-bottom: 10px;
+}
+
+.room-type-item i {
+    margin-right: 10px;
+    color: #00a651;
+    font-size: 1.1em;
+}
+
+/* Es bueno saberlo */
+.good-to-know-section {
+    margin-bottom: 20px;
+}
+
+.good-to-know-section h4 {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.good-to-know-section h4 .info-icon {
+    font-size: 0.8em;
+    margin-left: 5px;
+    color: #999;
+}
+
+.good-to-know-section p {
+    font-size: 0.95em;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+
+/* --- Media Queries para Responsividad --- */
+@media (max-width: 992px) {
+    .info-content-wrapper {
+        flex-direction: column; /* Apila las columnas */
+    }
+
+    .info-left-column,
+    .info-right-column {
+        min-width: unset; /* Quita el ancho mínimo para que ocupe todo el espacio disponible */
+        flex: auto;
+    }
+
+    .hotel-info-section h2 {
+        text-align: center;
+        padding-left: 0;
+    }
+
+    .overall-rating {
+        justify-content: center; /* Centra la calificación general */
+    }
+
+    .hotel-count {
+        text-align: center;
+    }
+
+    .detailed-ratings .rating-item {
+        justify-content: center; /* Centra las calificaciones individuales */
+    }
+
+    .hotel-description,
+    .suggest-edit,
+    .edit-profile-link {
+        text-align: center;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr; /* Una columna en pantallas más pequeñas */
+    }
+
+    .service-item,
+    .room-type-item {
+        justify-content: center; /* Centra los items en columnas */
+    }
+
+    .show-more-button {
+        justify-content: center;
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .overall-rating .rating-number {
+        font-size: 3em; /* Un poco más pequeño en móviles */
+    }
+
+    .overall-rating .rating-description {
+        font-size: 1.2em;
+    }
+
+    .overall-rating .star-rating {
+        font-size: 0.8em;
+    }
+
+    .hotel-info-section h2 {
+        font-size: 1.8em;
+    }
+
+    .info-content-wrapper {
+        padding: 0 10px;
+    }
+/* ... (todo tu código CSS existente) ... */
+
+/* --- NUEVO: Estilo para los enlaces de integrantes del equipo --- */
+.team-member-link {
+    color: #f0c300; /* Color amarillo similar al del email */
+    text-decoration: none;
+    font-weight: normal;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.team-member-link:hover {
+    color: #ffd700; /* Un amarillo un poco más brillante al pasar el mouse */
+    text-decoration: underline;
+   }
+}
