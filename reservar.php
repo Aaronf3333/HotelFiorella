@@ -1,22 +1,20 @@
 <?php
+// Inicia el buffer de salida para evitar errores de "headers already sent"
+ob_start();
+
 // Inicia sesión
-if (session_status() === PHP_SESSION_NONE) {
-    session_start();
-}
+session_start();
 
-// Incluye la conexión a la base de datos
-include('includes/db.php');
-
-// Verificamos si no hay una sesión activa
+// Verificamos si no hay una sesión de usuario activa
 if (!isset($_SESSION['usuario_id'])) {
     header('Location: login.php?notice=login_required&redirect_to=reservar.php');
     exit();
 }
 
-// Incluimos cabecera (ya con session_start)
-include('includes/header_public.php');
+// Incluimos conexión a la base de datos
+include('includes/db.php');
 
-// Obtenemos el nombre de la persona
+// Obtenemos el nombre de la persona desde la BD
 try {
     $sql_nombre = "SELECT p.Nombres 
                    FROM Persona p 
@@ -31,7 +29,7 @@ try {
     $nombre_persona = 'Cliente';
 }
 
-// Datos para los menús desplegables
+// Cargamos datos para los menús desplegables
 try {
     $habitaciones_sql = "SELECT h.HabitacionID, h.NumeroHabitacion, th.N_TipoHabitacion, h.PrecioPorNoche
                          FROM Habitaciones h 
@@ -47,6 +45,9 @@ try {
     $habitaciones_disponibles = [];
     $metodos_pago = [];
 }
+
+// Incluimos la cabecera (debe ser AFTER de session_start y antes de HTML)
+include('includes/header_public.php');
 ?>
 
 <div class="form-container">
@@ -94,4 +95,10 @@ try {
     </div>
 </div>
 
-<?php include('includes/footer.php'); ?>
+<?php
+// Incluimos el footer
+include('includes/footer.php');
+
+// Enviamos el buffer de salida
+ob_end_flush();
+?>
