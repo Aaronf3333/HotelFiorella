@@ -14,22 +14,21 @@ $equipo = [
         'correo' => 'brayanb.martinez@upsjb.edu.pe',
         'codigo' => '74862093',
         'imagen' => 'img/brayan.jpg', 
-        'presentacion' => 'Soy Brayan Martínez, un apasionado por el desarrollo web, las bases de datos y todo lo relacionado con la programación aplicada a resolver problemas reales. Me gusta crear soluciones eficientes y automatizadas, especialmente en contextos como sistemas de reservas, dashboards de reportes y herramientas de cálculo numérico. Me interesa que todo lo que desarrollo no solo funcione bien, sino que sea fácil de usar para cualquier persona.
-
-Más allá del código, valoro mucho la comunicación y el lado humano de la tecnología. Siempre busco aprender más, mejorar mis ideas y conectar con quienes usan lo que creo.',
-        // --- URL DEL VIDEO CORREGIDA DEFINITIVAMENTE ---
-        'video_url' => 'https://www.youtube.com/embed/Ba_M7Y9GxHw?si=MDYT3jOqVtr7YjOB' 
+        'presentacion' => 'Soy Brayan Martínez, un apasionado por el desarrollo web...',
+        'video_url' => 'https://www.youtube.com/embed/Ba_M7Y9GxHw?si=MDYT3jOqVtr7YjOB'
     ],
+
     'david' => [
         'nombres' => 'David Fernando',
         'apellidos' => 'Gamboa Juscaymayta',
-        'celular' => '914620420', 
+        'celular' => '914620420',
         'correo' => 'david.gamboa@uspjb.edu.pe',
         'codigo' => '60725846',
         'imagen' => 'img/david.png',
         'presentacion' => '',
         'video_url' => 'https://www.youtube.com/embed/W2MpGCL8-9o?si=unGeFCsu3irTjWyZ'
     ],
+
     'cesar' => [
         'nombres' => 'Cesar Augusto',
         'apellidos' => 'Gavilano Falla',
@@ -37,11 +36,10 @@ Más allá del código, valoro mucho la comunicación y el lado humano de la tec
         'correo' => 'cesar.gavilano@uspjb.edu.pe',
         'codigo' => '61853219',
         'imagen' => 'img/cesar.jpg',
-        'presentacion' => 'Soy una persona curiosa, autodidacta y apasionada por la tecnología. Me gusta entender cómo funcionan las cosas, crear soluciones útiles y mejorar procesos, especialmente en áreas como sistemas, energía y desarrollo web.
-Trabajo con enfoque práctico, comunicación directa y actitud relajada. Me gustan los desafíos y no me rindo fácil: si algo no sale a la primera, lo intento hasta que funcione.
-Disfruto de los videojuegos y me fascina la ciencia aeroespacial; la curiosidad por lo desconocido siempre me motiva a seguir aprendiendo y explorando nuevas ideas.',
+        'presentacion' => 'Soy una persona curiosa, autodidacta...',
         'video_url' => 'https://www.youtube.com/embed/JMJP1OCPp7U?si=Z3gnU3beNL_fBu18'
     ],
+
     'ruben' => [
         'nombres' => 'Ruben Yholino',
         'apellidos' => 'Quintanilla Ochoa',
@@ -52,6 +50,7 @@ Disfruto de los videojuegos y me fascina la ciencia aeroespacial; la curiosidad 
         'presentacion' => 'Me gustan todas menos gordas :3',
         'video_url' => 'https://www.youtube.com/embed/PcR8P1pG2pE?si=i2XaayUjZgrG_9uu'
     ],
+
     'jesus' => [
         'nombres' => 'Jesus Alexander',
         'apellidos' => 'Tenorio Gamonal',
@@ -62,6 +61,19 @@ Disfruto de los videojuegos y me fascina la ciencia aeroespacial; la curiosidad 
         'presentacion' => '',
         'video_url' => 'https://www.youtube.com/embed/6CTD9QA45kw?si=6zg9hSDtj38ScD_Z'
     ],
+
+    /* === TU BLOQUE BIEN PUESTO === */
+    'aaron' => [
+        'nombres'      => 'Aaron Isai',
+        'apellidos'    => 'Fernandez de la Cruz',
+        'celular'      => '900282294',
+        'correo'       => 'aaron.fernandez@upsjb.edu.pe',
+        'codigo'       => '60907408',
+        'imagen'       => 'img/aaron.png',
+        'presentacion' => 'Hola, soy Aaron Isai Fernandez de la Cruz. Apasionado por el desarrollo web...',
+        'video_url'    => 'https://www.youtube.com/embed/qNw8ejrI0nM'
+    ],
+
     'default' => [
         'nombres' => 'Integrante',
         'apellidos' => 'del Equipo',
@@ -73,6 +85,7 @@ Disfruto de los videojuegos y me fascina la ciencia aeroespacial; la curiosidad 
         'video_url' => ''
     ]
 ];
+
 
 // En el array $equipo (por ejemplo dentro de includes/equipo.php o donde lo tengas definido)
 'aaron' => [
@@ -176,3 +189,4 @@ $integrante_actual = isset($equipo[$integrante_id]) ? $equipo[$integrante_id] : 
 include('includes/footer.php');
 
 ?>
+
