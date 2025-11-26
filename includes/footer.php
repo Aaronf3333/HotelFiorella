@@ -25,7 +25,7 @@
                 </li>
                 <li>
                     <span class="icon"><i class="fas fa-user"></i></span>
-                    <a href="integrante.php?id=jesus" class="team-member-link">Tenorio Gamonal Jesus Alexander</a>
+                    <a href="integrante.php?id=jesus" class="team-member-link">Fernandez de la Cruz Aaron Isai</a>
                     <img src="img/jesus.png" alt="Avatar Jesus" class="avatar">
                 </li>
                 <li>
@@ -52,4 +52,5 @@
 </footer>
 <script src="assets/js/main.js"></script>
 </body>
+
 </html>
