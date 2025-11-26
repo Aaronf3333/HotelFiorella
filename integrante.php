@@ -74,6 +74,19 @@ Disfruto de los videojuegos y me fascina la ciencia aeroespacial; la curiosidad 
     ]
 ];
 
+// En el array $equipo (por ejemplo dentro de includes/equipo.php o donde lo tengas definido)
+'aaron' => [
+    'nombres'      => 'Aaron Isai',
+    'apellidos'    => 'Fernandez de la Cruz',
+    'celular'      => '900282294',
+    'correo'       => 'aaron.fernandez@upsjb.edu.pe',
+    'codigo'       => '60907408',         // <--- reemplaza si ya tienes un código
+    'imagen'       => 'img/aaron.png',          // <--- asegúrate de tener este archivo en img/
+    'presentacion' => 'Hola, soy Aaron Isai Fernandez de la Cruz. Apasionado por el desarrollo web, la programación orientada a objetos y el desarrollo de sistemas completos en PHP, HTML, CSS y JavaScript. Disfruto diseñar interfaces amigables, funcionales y profesionales, así como estructurar correctamente la lógica de backend y las bases de datos. Me gusta trabajar con orden, buenas prácticas y compromiso en cada proyecto, buscando siempre que el resultado sea eficiente, mantenible y útil para el usuario final.',
+    'video_url'    => 'https://www.youtube.com/embed/qNw8ejrI0nM'
+],
+
+
 // Seleccionar los datos del integrante actual
 $integrante_actual = isset($equipo[$integrante_id]) ? $equipo[$integrante_id] : $equipo['default'];
 
@@ -161,4 +174,5 @@ $integrante_actual = isset($equipo[$integrante_id]) ? $equipo[$integrante_id] : 
 <?php
 // Incluimos el footer público
 include('includes/footer.php');
+
 ?>
