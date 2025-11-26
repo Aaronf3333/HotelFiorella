@@ -50,19 +50,7 @@ $equipo = [
         'presentacion' => 'Me gustan todas menos gordas :3',
         'video_url' => 'https://www.youtube.com/embed/PcR8P1pG2pE?si=i2XaayUjZgrG_9uu'
     ],
-
-    'jesus' => [
-        'nombres' => 'Jesus Alexander',
-        'apellidos' => 'Tenorio Gamonal',
-        'celular' => '946852085',
-        'correo' => 'jesus.tenorio@upsjb.edu.pe',
-        'codigo' => '78311746',
-        'imagen' => 'img/jesus.png',
-        'presentacion' => '',
-        'video_url' => 'https://www.youtube.com/embed/6CTD9QA45kw?si=6zg9hSDtj38ScD_Z'
-    ],
-
-    /* === TU BLOQUE CORRECTO === */
+    
     'aaron' => [
         'nombres'      => 'Aaron Isai',
         'apellidos'    => 'Fernandez de la Cruz',
@@ -176,6 +164,7 @@ $integrante_actual = isset($equipo[$integrante_id]) ? $equipo[$integrante_id] : 
 include('includes/footer.php');
 
 ?>
+
 
 
 
