@@ -25,9 +25,10 @@
                 </li>
                 <li>
                     <span class="icon"><i class="fas fa-user"></i></span>
-                    <a href="integrante.php?id=jesus" class="team-member-link">Fernandez de la Cruz Aaron Isai</a>
-                    <img src="img/jesus.png" alt="Avatar Jesus" class="avatar">
+                    <a href="integrante.php?id=aaron" class="team-member-link">Fernandez de la Cruz Aaron Isai</a>
+                    <img src="img/aaron.png" alt="Avatar Aaron" class="avatar">
                 </li>
+
                 <li>
                     <span class="icon"><i class="fas fa-user-tie"></i></span> Ing. Luis Alfredo Castillon Siguas | <a href="mailto:luis.castillon@upsjb.edu.pe" class="email">luis.castillon@upsjb.edu.pe</a>
                 </li>
@@ -54,3 +55,4 @@
 </body>
 
 </html>
+
